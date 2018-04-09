@@ -10,13 +10,21 @@ import { AuthenticationService } from './authentication.service';
 export class AppComponent {
   user;
   userId;
+  private isLoggedIn: boolean;
   userEmail;
 
 constructor(public authService: AuthenticationService) {
   this.authService.user.subscribe(user => {
-    this.userId = user.uid;
-    this.user = user.displayName;
-    this.userEmail = user.email; // ACTUALLY DISPLAYS THE EMAIL
+    this.user = user
+
+    
+    if (user == null) {
+      this.isLoggedIn = false;
+      console.log("if " + this.isLoggedIn);
+    } else {
+      this.isLoggedIn = true;
+      console.log("else " + this.isLoggedIn);
+    }
   });
 }
 
