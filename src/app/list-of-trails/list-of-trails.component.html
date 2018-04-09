@@ -1,0 +1,12 @@
+<p>
+  list-of-trails works!
+</p>
+<div class="main">
+  <div class="card" *ngFor="let singleTrail of trails | async">
+    <div class="row">
+      <div class="col-md-3">
+        <h3>{{singleTrail.name}}</h3>
+      </div>
+    </div>
+  </div>
+</div>

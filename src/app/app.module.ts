@@ -8,8 +8,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
+
 import { AuthComponent } from './auth/auth.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+
+import { ListOfTrailsComponent } from './list-of-trails/list-of-trails.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,8 +26,11 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+
     AuthComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ListOfTrailsComponent
+
   ],
   imports: [
     BrowserModule,
