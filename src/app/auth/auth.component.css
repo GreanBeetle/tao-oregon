@@ -17,6 +17,15 @@ input {
     border: 0;
     margin: 0 auto;
     background-image: url('http://www.setyourowntests.com/_/rsrc/1468869481521/help/accounts/btn_google_signin_dark_normal_web%402x.png');
-    background-size: 191px 46px; 
+    background-size: 191px 46px;
+    cursor: pointer;
+}
+
+#btn-create-user {
+    text-align: center;
+    display: block;
+    width: 191px;
+    height: 46px;
+    margin: 0 auto;
     cursor: pointer;
 }

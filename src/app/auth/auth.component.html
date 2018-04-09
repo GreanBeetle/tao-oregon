@@ -1,8 +1,15 @@
 <div class="card">
   <label for="email">EMAIL: </label>
-  <input type="text" name="email" value="">
+  <input #email type="text" name="email" value="">
   <label for="password">PASSWORD: </label>
-  <input type="password" name="password" value="">
+  <input #password type="password" name="password" value="">
   <br>
+  <button (click)="createUser(email.value, password.value); email.value=''; password.value=''" id="btn-create-user">SIGN UP</button>
   <button (click)="googleLogin()" id="btn-google"></button>
+</div>
+<br>
+<div class="card">
+  <h1>{{user}}</h1>
+  <h1>UID: {{uid}}</h1><br>
+  <h1>USER EMAIL: {{userEmail}}</h1>
 </div>
