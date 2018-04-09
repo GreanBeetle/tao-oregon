@@ -35,10 +35,15 @@ export class TrailDetailComponent implements OnInit {
       this.trailToDisplay = result;
       var mapProp = {
         center: new google.maps.LatLng(this.trailToDisplay.latitude, this.trailToDisplay.longitude),
-        zoom: 10,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        zoom: 20,
+        mapTypeId: google.maps.MapTypeId.SATELLITE
       }
-      this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp)
+      this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+      var marker = new google.maps.Marker({
+        position: {lat: this.trailToDisplay.latitude, lng: this.trailToDisplay.longitude},
+        map: this.map,
+        title: 'Hello World!'
+      });
     })
     // this.trailToDisplay = this.trailService.getTrailById(this.trailId);
     // console.log(this.trailToDisplay);
