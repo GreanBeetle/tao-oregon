@@ -31,6 +31,10 @@ constructor(public authService: AuthenticationService) {
     this.authService.googleLogin();
   }
 
+  facebookLogin() {
+    this.authService.facebookLogin(); 
+  }
+
   signOut() {
     this.authService.logout();
   }
