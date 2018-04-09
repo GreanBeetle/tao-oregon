@@ -1,5 +1,7 @@
 <p>
-  {{(trailToDisplay| async)?.name}}
-  {{(trailToDisplay| async)?.longitude}}
-  {{(trailToDisplay| async)?.latitude}}
+  {{(trailToDisplay)?.name}}
+  {{(trailToDisplay)?.latitude}}
+  {{(trailToDisplay)?.longitude}}
 </p>
+
+<div id="gmap" #googlemap ></div>

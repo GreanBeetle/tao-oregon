@@ -4,6 +4,10 @@ import { TrailService } from '../trail.service';
 import { Trail } from '../models/trail.model';
 import { Location } from '@angular/common';
 import { FirebaseObjectObservable} from 'angularfire2/database';
+import { ViewChild } from '@angular/core';
+import { } from '@types/googlemaps';
+
+
 @Component({
   selector: 'app-trail-detail',
   templateUrl: './trail-detail.component.html',
@@ -12,7 +16,9 @@ import { FirebaseObjectObservable} from 'angularfire2/database';
 })
 export class TrailDetailComponent implements OnInit {
   trailId: string;
-  trailToDisplay: FirebaseObjectObservable<any>;
+  trailToDisplay;
+  @ViewChild('googlemap') gmapElement: any;
+  map: google.maps.Map;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,8 +31,23 @@ export class TrailDetailComponent implements OnInit {
       this.trailId = urlParameters['id'];
       console.log(this.trailId)
     });
-    this.trailToDisplay = this.trailService.getTrailById(this.trailId);
-    console.log(this.trailToDisplay);
+    this.trailService.getTrailById(this.trailId).subscribe( result => {
+      this.trailToDisplay = result;
+      var mapProp = {
+        center: new google.maps.LatLng(this.trailToDisplay.latitude, this.trailToDisplay.longitude),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp)
+    })
+    // this.trailToDisplay = this.trailService.getTrailById(this.trailId);
+    // console.log(this.trailToDisplay);
+    // var mapProp = {
+    //   center: new google.maps.LatLng(this.trailToDisplay.latitude, this.trailToDisplay.longitude),
+    //   zoom: 10,
+    //   mapTypeId: google.maps.MapTypeId.ROADMAP
+    // }
+    // this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp)
   }
 
 }
