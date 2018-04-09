@@ -1,7 +1,8 @@
 export var masterFirebaseConfig = {
-  apiKey: "xxxx",
-  authDomain: "xxxx.firebaseapp.com",
-  databaseURL: "https://xxxx.firebaseio.com",
-  storageBucket: "xxxx.appspot.com",
-  messagingSenderId: "xxxx"
+  apiKey: "AIzaSyD_PfQp2_82aR8GH5jSRMTwvrqjDc4wK7s",
+  authDomain: "tao-oregon.firebaseapp.com",
+  databaseURL: "https://tao-oregon.firebaseio.com",
+  projectId: "tao-oregon",
+  storageBucket: "tao-oregon.appspot.com",
+  messagingSenderId: "81271740739"
 };
