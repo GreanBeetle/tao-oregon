@@ -16,7 +16,11 @@ trails: FirebaseListObservable<any[]>
 
   ngOnInit() {
     this.trails = this.trailService.getTrails();
-
   }
+
+  goToDetailPage(singleTrail) {
+    this.router.navigate(['trails', singleTrail.$key]);
+  }
+
 
 }

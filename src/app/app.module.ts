@@ -14,6 +14,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthenticationService } from './authentication.service';
 
 import { ListOfTrailsComponent } from './list-of-trails/list-of-trails.component';
+import { TrailDetailComponent } from './trail-detail/trail-detail.component';
 
 
 export const firebaseConfig = {
@@ -30,7 +31,8 @@ export const firebaseConfig = {
 
     AuthComponent,
     WelcomeComponent,
-    ListOfTrailsComponent
+    ListOfTrailsComponent,
+    TrailDetailComponent
 
   ],
   imports: [

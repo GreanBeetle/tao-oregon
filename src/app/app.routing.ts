@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ListOfTrailsComponent } from './list-of-trails/list-of-trails.component';
+import { TrailDetailComponent } from './trail-detail/trail-detail.component';
+
 
 const appRoutes: Routes = [
 
@@ -20,6 +22,10 @@ const appRoutes: Routes = [
 
     path: 'trails',
     component: ListOfTrailsComponent
+  },
+  {
+    path: 'trails/:id',
+    component: TrailDetailComponent
   }
 
 
