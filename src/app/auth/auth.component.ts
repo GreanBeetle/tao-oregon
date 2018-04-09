@@ -8,14 +8,26 @@ import { AuthenticationService } from '../authentication.service';
   providers: [ AuthenticationService ]
 })
 export class AuthComponent implements OnInit {
+  user;
+  uid;
+  userEmail;
 
-  constructor(public authService: AuthenticationService) { }
+constructor(public authService: AuthenticationService) {
+  this.authService.user.subscribe(user => {
+    this.uid = user.uid;
+    this.user = user.displayName;
+    this.userEmail = user.email; // ACTUALLY DISPLAYS THE EMAIL
+  });
+}
 
   ngOnInit() {
   }
 
   createUser(email, password) {
     this.authService.createUser(email, password);
+    this.user = this.authService.user;
+    console.log(email + " " + password);
+    console.log("USER: " + this.user);
   }
 
   googleLogin() {

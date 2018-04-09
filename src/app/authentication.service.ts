@@ -5,17 +5,14 @@ import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
 
 
+
+
 @Injectable()
 export class AuthenticationService {
   user: Observable<firebase.User>;
-  uid;
-  userEmail;
 
   constructor(public afAuth: AngularFireAuth, private router:Router) {
-    // this.user.subscribe(person => {
-    //   this.uid = person.uid;
-    //   this.userEmail = person.email;
-    // });
+    this.user = afAuth.authState;
   }
 
   googleLogin() {

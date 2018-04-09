@@ -2,8 +2,14 @@
 <div id="navwell">
   <div class="navbar">
     <h3><a routerLink="" class="links">HOME</a></h3>
-    <h3><a routerLink="trails" class="links">TRAILS</a></h3>
-    <h3><a routerLink="auth" class="links">LOGIN</a></h3>
+    <h3><a class="links">TRAILS</a></h3>
+    <div *ngIf="!userId">
+      <h3><a routerLink="auth" class="links">LOGIN</a></h3>
+    </div>
+    <div *ngIf="userId">
+      <h3><a (click)="signOut()" class="links">LOGOUT</a></h3>
+      <h3><a routerLink="auth" class="links">{{userEmail}}</a></h3>
+  </div>
   </div>
 </div>
 <router-outlet></router-outlet>

@@ -11,6 +11,7 @@ import { masterFirebaseConfig } from './api-keys';
 
 import { AuthComponent } from './auth/auth.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AuthenticationService } from './authentication.service';
 
 import { ListOfTrailsComponent } from './list-of-trails/list-of-trails.component';
 
@@ -41,7 +42,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
