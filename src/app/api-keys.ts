@@ -1,8 +1,8 @@
 export var masterFirebaseConfig = {
-  apiKey: "AIzaSyD_PfQp2_82aR8GH5jSRMTwvrqjDc4wK7s",
-  authDomain: "tao-oregon.firebaseapp.com",
-  databaseURL: "https://tao-oregon.firebaseio.com",
-  projectId: "tao-oregon",
-  storageBucket: "tao-oregon.appspot.com",
-  messagingSenderId: "81271740739"
+  apiKey: "AIzaSyBZImPuQQ09rPbDzOvtfFZnNPBXuAFyXrA",
+  authDomain: "taooregon-dd774.firebaseapp.com",
+  databaseURL: "https://taooregon-dd774.firebaseio.com",
+  projectId: "taooregon-dd774",
+  storageBucket: "",
+  messagingSenderId: "923252752090"
 };
