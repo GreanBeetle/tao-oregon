@@ -29,3 +29,8 @@ input {
     margin: 0 auto;
     cursor: pointer;
 }
+
+#signUp:hover, #backToSignIn:hover {
+  color: lightblue;
+  cursor: pointer;
+}
