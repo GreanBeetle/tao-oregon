@@ -7,7 +7,7 @@ import { AuthenticationService } from '../authentication.service';
   styleUrls: ['./auth.component.css'],
   providers: [ AuthenticationService ]
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent {
   user;
   uid;
   userEmail;
@@ -20,7 +20,8 @@ constructor(public authService: AuthenticationService) {
   });
 }
 
-  ngOnInit() {
+  signIn(email, password) {
+    this.authService.signIn(email, password);
   }
 
   createUser(email, password) {

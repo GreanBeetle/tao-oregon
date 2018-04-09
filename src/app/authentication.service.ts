@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 @Injectable()
 export class AuthenticationService {
   user: Observable<firebase.User>;
+  // authState: FirebaseAuthState = null;
 
   constructor(public afAuth: AngularFireAuth, private router:Router) {
     this.user = afAuth.authState;
@@ -32,6 +33,23 @@ export class AuthenticationService {
       }
     }); // error function
   } // createUser
+
+  signIn(email, password) {
+    if (firebase.auth().currentUser) {
+      firebase.auth().signOut();
+    } else {
+     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+      var errorCode = error.name;
+      var errorMessage = error.message;
+      if (errorCode === 'auth/wrong-password') {
+        alert('Wrong password.');
+      } else {
+        alert(errorMessage);
+      }
+        console.log(error);
+      });
+     }
+   }
 
 
 

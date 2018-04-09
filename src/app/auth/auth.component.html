@@ -1,4 +1,14 @@
 <div class="card">
+  <label for="signinEmail">EMAIL: </label>
+  <input #emailSignIn type="text" name="signinEmail" value="">
+  <label for="signinPassword">PASSWORD: </label>
+  <input #passwordSignIn type="password" name="signinPassword" value="">
+  <br>
+  <button (click)="signIn(emailSignIn.value, passwordSignIn.value); emailSignIn.value=''; passwordSignIn.value=''" id="btn-create-user">SIGN IN</button>
+</div>
+
+
+<div class="card">
   <label for="email">EMAIL: </label>
   <input #email type="text" name="email" value="">
   <label for="password">PASSWORD: </label>
@@ -8,8 +18,3 @@
   <button (click)="googleLogin()" id="btn-google"></button>
 </div>
 <br>
-<div class="card">
-  <h1>{{user}}</h1>
-  <h1>UID: {{uid}}</h1><br>
-  <h1>USER EMAIL: {{userEmail}}</h1>
-</div>
