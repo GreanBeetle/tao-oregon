@@ -16,6 +16,8 @@ import { AuthenticationService } from './authentication.service';
 import { ListOfTrailsComponent } from './list-of-trails/list-of-trails.component';
 import { TrailDetailComponent } from './trail-detail/trail-detail.component';
 import { AirQualityComponent } from './air-quality/air-quality.component';
+import { SearchPipe } from './search.pipe';
+import { SearchComponent } from './search/search.component';
 
 
 export const firebaseConfig = {
@@ -34,7 +36,9 @@ export const firebaseConfig = {
     WelcomeComponent,
     ListOfTrailsComponent,
     TrailDetailComponent,
-    AirQualityComponent
+    AirQualityComponent,
+    SearchPipe,
+    SearchComponent
 
   ],
   imports: [

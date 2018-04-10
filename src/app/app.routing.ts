@@ -6,6 +6,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ListOfTrailsComponent } from './list-of-trails/list-of-trails.component';
 import { TrailDetailComponent } from './trail-detail/trail-detail.component';
 import { AirQualityComponent } from './air-quality/air-quality.component';
+import { SearchComponent } from './search/search.component';
 
 
 const appRoutes: Routes = [
@@ -22,7 +23,7 @@ const appRoutes: Routes = [
   {
 
     path: 'trails',
-    component: ListOfTrailsComponent
+    component: SearchComponent
   },
   {
     path: 'trails/:id',

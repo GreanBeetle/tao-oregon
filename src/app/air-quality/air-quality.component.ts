@@ -16,7 +16,7 @@ export class AirQualityComponent implements OnInit {
   getAqi(lat:string, lng:string) {
     this.airQualityApi.getAirQualityByLatLong(lat, lng).subscribe(response => {
       this.airQualityReport = response.json();
-    
+
     });
   }
 
