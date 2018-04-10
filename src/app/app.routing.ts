@@ -6,6 +6,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ListOfTrailsComponent } from './list-of-trails/list-of-trails.component';
 import { TrailDetailComponent } from './trail-detail/trail-detail.component';
 import { AirQualityComponent } from './air-quality/air-quality.component';
+import { WriteReportComponent } from './write-report/write-report.component'; 
 
 
 const appRoutes: Routes = [
@@ -27,6 +28,10 @@ const appRoutes: Routes = [
   {
     path: 'trails/:id',
     component: TrailDetailComponent
+  },
+  {
+    path: 'report/:id',
+    component: WriteReportComponent
   }
 
 
