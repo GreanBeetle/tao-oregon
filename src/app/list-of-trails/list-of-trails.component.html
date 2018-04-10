@@ -1,11 +1,11 @@
-<p>
-  list-of-trails works!
-</p>
 <div class="main">
-  <div class="card" *ngFor="let singleTrail of trails | async">
+  <div class="card" *ngFor="let singleTrail of trails | search:childParams">
     <div class="row">
       <div class="col-md-3">
         <h3>{{singleTrail.name}}</h3>
+      </div>
+      <div *ngIf="singleTrail.distanceFromPoint" class="col-md-2">
+        <h4> Distance from location: {{singleTrail.distanceFromPoint}}</h4>
       </div>
       <button class="btn btn-info" (click)="goToDetailPage(singleTrail)" type="button" name="button">See Trail Info</button>
       <button class="btn btn-success" (click)="leaveReport(singleTrail)" type="button" name="button">Leave a Report</button>

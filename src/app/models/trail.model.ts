@@ -1,30 +1,36 @@
 export class Trail {
-  // public reports: Report[] = [];
-  constructor(
-    public id: number,
-    public name: string,
-    public type: string,
-    public summary: string,
-    public difficulty: string,
-    public stars: number,
-    public starVotes: number,
-    public location: string,
-    public url: string,
-    public imgSqSmall: string,
-    public imgSmall: string,
-    public imgSmallMed: string,
-    public imgMedium: string,
-    public length: number,
-    public ascent: number,
-    public descent: number,
-    public high: number,
-    public low: number,
-    public longitude: number,
-    public latitude: number,
-    public conditionStatus: string,
-    public conditionDetails: string,
-    public conditionDate: string,
-  ) {}
+  public report: string = '';
+  constructor(public dataObject: Object) {
+    this.id = dataObject.id;
+    this.longitude = dataObject.longitude;
+    this.latitude = dataObject.latitude;
+    this.name = dataObject.name;
+    this.$key = dataObject.$key;
+    this.distanceFromPoint = null;
+    // public id: number,
+    // public name: string,
+    // public type: string,
+    // public summary: string,
+    // public difficulty: string,
+    // public stars: number,
+    // public starVotes: number,
+    // public location: string,
+    // public url: string,
+    // public imgSqSmall: string,
+    // public imgSmall: string,
+    // public imgSmallMed: string,
+    // public imgMedium: string,
+    // public length: number,
+    // public ascent: number,
+    // public descent: number,
+    // public high: number,
+    // public low: number,
+    // public longitude: number,
+    // public latitude: number,
+    // public conditionStatus: string,
+    // public conditionDetails: string,
+    // public conditionDate: string,
+  }
 }
 
 

@@ -18,7 +18,8 @@ import { UserService } from './user.service';
 import { AirQualityComponent } from './air-quality/air-quality.component';
 import { WriteReportComponent } from './write-report/write-report.component';
 import { ReportService } from './report.service';
-
+import { SearchPipe } from './search.pipe';
+import { SearchComponent } from './search/search.component';
 
 
 export const firebaseConfig = {
@@ -38,7 +39,9 @@ export const firebaseConfig = {
     ListOfTrailsComponent,
     TrailDetailComponent,
     AirQualityComponent,
-    WriteReportComponent
+    WriteReportComponent,
+    SearchPipe,
+    SearchComponent
 
   ],
   imports: [

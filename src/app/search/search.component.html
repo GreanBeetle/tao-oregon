@@ -1,0 +1,6 @@
+<form class="search" action="index.html" method="post">
+  <label>Name:</label>
+  <input #searchName type="text" id="searchName">
+  <button (click)="searchTrails(searchName.value)"class="btn btn-info">SEARCH TRAILS!</button>
+</form>
+<app-list-of-trails [childParams]="params"></app-list-of-trails>
