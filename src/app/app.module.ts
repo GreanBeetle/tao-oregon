@@ -14,11 +14,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthenticationService } from './authentication.service';
 import { ListOfTrailsComponent } from './list-of-trails/list-of-trails.component';
 import { TrailDetailComponent } from './trail-detail/trail-detail.component';
-<<<<<<< HEAD
 import { UserService } from './user.service';
-=======
 import { AirQualityComponent } from './air-quality/air-quality.component';
->>>>>>> 170d339eaea21ab5bf23bc5fa1e13dee78f2b837
+
 
 
 export const firebaseConfig = {
