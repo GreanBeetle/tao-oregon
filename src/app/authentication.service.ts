@@ -3,8 +3,8 @@ import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
-
-
+import 'rxjs/add/operator/switchMap';
+import { UserService } from './user.service';
 
 
 @Injectable()
@@ -12,7 +12,7 @@ export class AuthenticationService {
   user: Observable<firebase.User>;
   // authState: FirebaseAuthState = null;
 
-  constructor(public afAuth: AngularFireAuth, private router:Router) {
+  constructor(public afAuth: AngularFireAuth, private router:Router, public userServ: UserService) {
     this.user = afAuth.authState;
   }
 
@@ -21,20 +21,24 @@ export class AuthenticationService {
   }
 
   createUser(email, password) {
+    firebase.auth().createUserWithEmailAndPassword(email, password).then( response => {
+      console.log("RESPONSE: " + response.uid);
+
+    })
 
 
 
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.name;
-      var errorMessage = error.message;
-      // [START_EXCLUDE]
-      if (errorCode == 'auth/weak-password') {
-        alert('The password is too weak.');
-      } else {
-        alert(errorMessage);
-      }
-    }); // error function
+    // catch(function(error) {
+    //   // Handle Errors here.
+    //   var errorCode = error.name;
+    //   var errorMessage = error.message;
+    //   // [START_EXCLUDE]
+    //   if (errorCode == 'auth/weak-password') {
+    //     alert('The password is too weak.');
+    //   } else {
+    //     alert(errorMessage);
+    //   }
+    // }); // error function
   } // createUser
 
   signIn(email, password) {

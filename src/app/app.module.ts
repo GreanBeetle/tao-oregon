@@ -12,9 +12,9 @@ import { masterFirebaseConfig } from './api-keys';
 import { AuthComponent } from './auth/auth.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthenticationService } from './authentication.service';
-
 import { ListOfTrailsComponent } from './list-of-trails/list-of-trails.component';
 import { TrailDetailComponent } from './trail-detail/trail-detail.component';
+import { UserService } from './user.service';
 
 
 export const firebaseConfig = {
@@ -32,7 +32,7 @@ export const firebaseConfig = {
     AuthComponent,
     WelcomeComponent,
     ListOfTrailsComponent,
-    TrailDetailComponent
+    TrailDetailComponent,
 
   ],
   imports: [
@@ -44,7 +44,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthenticationService],
+  providers: [AuthenticationService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,9 +13,9 @@ export class AppComponent {
 
 
 constructor(public authService: AuthenticationService) {
-  this.authService.user.subscribe(user => {
-    this.user = user
-    if (user == null) {
+  this.authService.user.subscribe(theUser => {
+    this.user = theUser
+    if (theUser == null) {
       this.isLoggedIn = false;
       console.log("if " + this.isLoggedIn);
     } else {
