@@ -10,7 +10,7 @@
 
     <div *ngIf="isLoggedIn">
       <h3><a (click)="signOut()" class="links">LOGOUT</a></h3>
-      <h3><a routerLink="auth" class="links">{{user?.uid}}</a></h3>
+      <h3><a routerLink="auth" class="links">{{user?.email}}</a></h3>
     </div>
 
   </div>

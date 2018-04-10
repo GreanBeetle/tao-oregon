@@ -9,15 +9,12 @@ import { AuthenticationService } from './authentication.service';
 })
 export class AppComponent {
   user;
-  userId;
   private isLoggedIn: boolean;
-  userEmail;
+
 
 constructor(public authService: AuthenticationService) {
   this.authService.user.subscribe(user => {
     this.user = user
-
-    
     if (user == null) {
       this.isLoggedIn = false;
       console.log("if " + this.isLoggedIn);

@@ -2,7 +2,6 @@
   <div class="card-header">
     <h1>SIGN IN</h1>
   </div>
-
     <div class="form">
       <div class="form-group">
         <small class="labels" for="signinEmail">EMAIL: </small>
@@ -11,13 +10,9 @@
         <input class="form-control" #passwordSignIn type="password" name="signinPassword" value="">
       </div>
     </div>
-
-      <button (click)="signIn(emailSignIn.value, passwordSignIn.value); emailSignIn.value=''; passwordSignIn.value=''" id="btn-create-user">SIGN IN</button>
-      <button (click)="googleLogin()" id="btn-google"></button>
-
-
-      <small>Don't have an account? <a (click)="toggleHasAccount()" id="signUp">SIGN UP</a></small>
-
+    <button (click)="signIn(emailSignIn.value, passwordSignIn.value); emailSignIn.value=''; passwordSignIn.value=''" id="btn-create-user">SIGN IN</button>
+    <button (click)="googleLogin()" id="btn-google"></button>
+    <small>Don't have an account? <a (click)="toggleHasAccount()" id="signUp">SIGN UP</a></small>
 </div>
 
 <div *ngIf="!hasAccount" class="card">
