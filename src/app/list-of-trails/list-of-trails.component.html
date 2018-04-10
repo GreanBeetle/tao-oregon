@@ -1,4 +1,5 @@
-<div class="main">
+
+<div *ngIf="trails != []" class="main">
   <div class="card" *ngFor="let singleTrail of trails | search:childParams">
     <div class="row">
       <div class="col-md-3">

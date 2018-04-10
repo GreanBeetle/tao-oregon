@@ -11,17 +11,12 @@ import { FirebaseListObservable} from 'angularfire2/database';
   providers: [ TrailService ]
 })
 export class SearchComponent implements OnInit {
-  trails: Trail[] = []
   params: Object = null;
 
   constructor(private trailService: TrailService) { }
 
   ngOnInit() {
-    this.trailService.getTrails().subscribe( result => {
-      for( let trail of result){
-        this.trails.push(new Trail(trail));
-      }
-    });
+
   }
 
 
