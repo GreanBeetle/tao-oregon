@@ -5,3 +5,6 @@
 </p>
 
 <div id="gmap" #googlemap ></div>
+
+
+<app-air-quality *ngIf="latLng" [childLatLng]="latLng"></app-air-quality>

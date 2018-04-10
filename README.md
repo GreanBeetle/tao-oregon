@@ -21,6 +21,13 @@
 * API call for weather conditions
 
 
+## Air pollution Functionality
+* Create scale to show AQI level
+
+## Weather functionality
+* Rank trails by temperature, maybe filter by weather
+
+
 # TaoOregon
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.

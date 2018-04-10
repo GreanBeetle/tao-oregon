@@ -16,6 +16,7 @@ import { } from '@types/googlemaps';
 })
 export class TrailDetailComponent implements OnInit {
   trailId: string;
+  latLng: string[] = null;
   trailToDisplay;
   @ViewChild('googlemap') gmapElement: any;
   map: google.maps.Map;
@@ -33,6 +34,7 @@ export class TrailDetailComponent implements OnInit {
     });
     this.trailService.getTrailById(this.trailId).subscribe( result => {
       this.trailToDisplay = result;
+      this.latLng = [this.trailToDisplay.latitude, this.trailToDisplay.longitude];
       var mapProp = {
         center: new google.maps.LatLng(this.trailToDisplay.latitude, this.trailToDisplay.longitude),
         zoom: 20,
