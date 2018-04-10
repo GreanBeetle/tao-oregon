@@ -1,5 +1,5 @@
 export class Trail {
-  public reports: Report[] = [];
+  // public reports: Report[] = [];
   constructor(
     public id: number,
     public name: string,
