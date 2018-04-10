@@ -9,8 +9,14 @@
     </div>
 
     <div *ngIf="isLoggedIn">
-      <h3><a (click)="signOut()" class="links">LOGOUT</a></h3>
-      <h3><a routerLink="auth" class="links">{{user?.uid}}</a></h3>
+      <div class="row">
+        <div class="col-sm-6">
+          <h3><a (click)="signOut()" class="links">LOGOUT</a></h3>
+        </div>
+        <div class="col-sm-6">
+          <h3><a routerLink="auth" class="links">{{user?.email}}</a></h3>
+        </div>
+      </div>
     </div>
 
   </div>

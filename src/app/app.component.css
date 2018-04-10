@@ -8,3 +8,7 @@
   margin-top: 10px;
   height: 100px;
 }
+
+.links:hover {
+  cursor: pointer; 
+}
