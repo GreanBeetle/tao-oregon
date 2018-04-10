@@ -22,5 +22,9 @@ trails: FirebaseListObservable<any[]>
     this.router.navigate(['trails', singleTrail.$key]);
   }
 
+  leaveReport(singleTrail) {
+    this.router.navigate(['report', singleTrail.$key]);
+  }
+
 
 }

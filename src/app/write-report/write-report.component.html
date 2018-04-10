@@ -1,0 +1,5 @@
+<div class="card">
+  <label for="trail">Tell us about the trail</label>
+  <input type="text" name="trail" value="" #trailReport><br>
+  <button class="btn btn-success" (click)="makeReport(trailReport.value); trailReport.value=''" type="button" name="button">SUBMIT REPORT</button>
+</div>

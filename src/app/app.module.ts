@@ -16,6 +16,8 @@ import { ListOfTrailsComponent } from './list-of-trails/list-of-trails.component
 import { TrailDetailComponent } from './trail-detail/trail-detail.component';
 import { UserService } from './user.service';
 import { AirQualityComponent } from './air-quality/air-quality.component';
+import { WriteReportComponent } from './write-report/write-report.component';
+import { ReportService } from './report.service';
 
 
 
@@ -35,7 +37,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     ListOfTrailsComponent,
     TrailDetailComponent,
-    AirQualityComponent
+    AirQualityComponent,
+    WriteReportComponent
 
   ],
   imports: [
@@ -47,7 +50,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthenticationService, UserService],
+  providers: [AuthenticationService, UserService, ReportService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

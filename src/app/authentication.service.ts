@@ -26,20 +26,6 @@ export class AuthenticationService {
       console.log("RESPONSE: " + response.uid);
       this.userServ.addUser(response.uid, response.email);
     })
-
-
-
-    // catch(function(error) {
-    //   // Handle Errors here.
-    //   var errorCode = error.name;
-    //   var errorMessage = error.message;
-    //   // [START_EXCLUDE]
-    //   if (errorCode == 'auth/weak-password') {
-    //     alert('The password is too weak.');
-    //   } else {
-    //     alert(errorMessage);
-    //   }
-    // }); // error function
   } // createUser
 
   signIn(email, password) {
