@@ -23,7 +23,7 @@ export class AuthenticationService {
   createUser(email, password) {
     firebase.auth().createUserWithEmailAndPassword(email, password).then( response => {
       console.log("RESPONSE: " + response.uid);
-
+      this.userServ.addUser(response.uid, response.email);
     })
 
 
