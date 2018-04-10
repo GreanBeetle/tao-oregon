@@ -20,4 +20,8 @@ export class UserService {
     this.users.push(user);
   }
 
+  findUser(theUID: string) {
+    return this.database.object('users/' + theUID)
+  }
+
 }
