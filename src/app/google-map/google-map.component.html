@@ -1,5 +1,5 @@
 <agm-map [latitude]="lat" [longitude]="lng">
   <agm-marker-cluster [imagePath]="imagepath">
-    <agm-marker *ngFor="let trail of trails" [latitude]="trail.latitude" [longitude]="trail.longitude"></agm-marker>
+    <agm-marker *ngFor="let trail of trails | search:childParams" [latitude]="trail.latitude" [longitude]="trail.longitude"></agm-marker>
   </agm-marker-cluster>
 </agm-map>

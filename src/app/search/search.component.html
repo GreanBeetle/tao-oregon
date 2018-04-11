@@ -9,4 +9,5 @@
   <input #trailLength type="number" id="searchName">
   <button (click)="searchTrails(searchName.value, userLocation.value, maxDistance.value, trailLength.value)"class="btn btn-info">SEARCH TRAILS!</button>
 </form>
+<app-google-map [childParams]="params"></app-google-map>
 <app-list-of-trails [childParams]="params"></app-list-of-trails>

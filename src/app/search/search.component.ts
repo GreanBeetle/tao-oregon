@@ -17,15 +17,24 @@ export class SearchComponent {
   constructor(private trailService: TrailService, private geoCodeService: GeoCodeApiService) { }
 
   searchTrails(name, userLocation, maxDistance, trailLength) {
-    this.geoCodeService.getLatLon(userLocation).subscribe( response => {
+    if(userLocation != ""){
+      this.geoCodeService.getLatLon(userLocation).subscribe( response => {
+        this.params = {
+          name: name,
+          userLocation: response.json().results[0].geometry.location,
+          maxDistance: maxDistance,
+          trailLength: trailLength,
+        };
+
+      });
+    } else{
       this.params = {
         name: name,
-        userLocation: response.json().results[0].geometry.location,
-        maxDistance: maxDistance,
         trailLength: trailLength,
+        userLocation: userLocation,
+        maxDistance: maxDistance,
       };
-      console.log(this.params);
-    });
+    }
   }
 
 
