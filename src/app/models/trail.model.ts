@@ -1,12 +1,12 @@
 export class Trail {
   public report: string = '';
   constructor(public dataObject: Object) {
-    this.id = dataObject.id;
-    this.longitude = dataObject.longitude;
-    this.latitude = dataObject.latitude;
-    this.name = dataObject.name;
-    this.$key = dataObject.$key;
-    this.distanceFromPoint = null;
+    // this.id = dataObject.id;
+    // this.longitude = dataObject.longitude;
+    // this.latitude = dataObject.latitude;
+    // this.name = dataObject.name;
+    // this.$key = dataObject.$key;
+    // this.distanceFromPoint = null;
     // public id: number,
     // public name: string,
     // public type: string,

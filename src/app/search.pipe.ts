@@ -12,7 +12,7 @@ export class SearchPipe implements PipeTransform {
     if(params){
       output = input.filter(trail => trail.name.toLowerCase().includes(params.name.toLowerCase()))
       return output;
-    } else{
+    } else {
       return input;
     }
   }
