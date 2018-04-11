@@ -11,7 +11,7 @@ import { FirebaseListObservable} from 'angularfire2/database';
   providers: [ TrailService ]
 })
 export class SearchComponent implements OnInit {
-  params: Object = null;
+  params: Object = {};
 
   constructor(private trailService: TrailService) { }
 
