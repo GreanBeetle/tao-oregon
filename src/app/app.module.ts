@@ -19,13 +19,12 @@ import { WriteReportComponent } from './write-report/write-report.component';
 import { ReportService } from './report.service';
 import { SearchPipe } from './search.pipe';
 import { SearchComponent } from './search/search.component';
-
 import { GoogleMapComponent } from './google-map/google-map.component';
-
 import { WeatherComponent } from './weather/weather.component';
-
 import { DistanceService } from './distance.service';
 import { HaversineService } from 'ng2-haversine';
+import { AgmCoreModule } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -38,7 +37,6 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-
     AuthComponent,
     WelcomeComponent,
     ListOfTrailsComponent,
@@ -58,7 +56,11 @@ export const firebaseConfig = {
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AgmJsMarkerClustererModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCGSSDsLTb0sP1TUIcq3eKWRVJVmRma3B8'
+    })
   ],
   providers: [
     AuthenticationService,
