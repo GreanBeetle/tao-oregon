@@ -9,16 +9,14 @@ import { DarkSkyApiService } from '../dark-sky-api.service';
 })
 export class WeatherComponent implements OnInit {
   @Input() childLatLng: string[];
-  weatherReport: any[]=null;
+  weatherReport;
 
   constructor(private darkSkyApi: DarkSkyApiService) { }
 
     getWeather(lat:string, lng:string) {
-      this.darkSkyApi.getWeather(lat, lng).subscribe(response => {
-        this.weatherReport = response.json();
-      })
+      this.weatherReport = this.darkSkyApi.getWeather(lat, lng)
       console.log(this.weatherReport);
-    }
+      }
 
   ngOnInit() {
     this.getWeather(this.childLatLng[0], this.childLatLng[1]);
