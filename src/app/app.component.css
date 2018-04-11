@@ -1,14 +1,22 @@
 .navbar {
   display: flex;
   justify-content: space-around;
-  width: 70%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
   height: 100px;
 }
 
+.links {
+  color: #41FB30;
+}
+
+.navwell, .navbar {
+  background-color: #1E895F;
+}
+
 .links:hover {
-  cursor: pointer; 
+  cursor: pointer;
 }
