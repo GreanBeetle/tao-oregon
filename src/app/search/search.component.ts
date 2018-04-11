@@ -11,32 +11,21 @@ import { GeoCodeApiService } from '../geo-code-api.service';
   styleUrls: ['./search.component.css'],
   providers: [ TrailService, GeoCodeApiService ]
 })
-export class SearchComponent implements OnInit {
-  params: Object = {};
-
+export class SearchComponent {
+  params: Object = null;
 
   constructor(private trailService: TrailService, private geoCodeService: GeoCodeApiService) { }
 
-  ngOnInit() {
-
-  }
-
-  getLatLon(location: any) {
-    this.geoCodeService.getLatLon(location).subscribe(result =>{
-      this.latLon = result.json();
-      console.log(this.latLon);
-      return latLon;
-    })
-  }
-
   searchTrails(name, userLocation, maxDistance, trailLength) {
-    this.params = {
-      name: name,
-      userLocation: userLocation,
-      maxDistance: maxDistance,
-      trailLength: trailLength
-    };
-    console.log(this.params)
+    this.geoCodeService.getLatLon(userLocation).subscribe( response => {
+      this.params = {
+        name: name,
+        userLocation: response.json().results[0].geometry.location,
+        maxDistance: maxDistance,
+        trailLength: trailLength,
+      };
+      console.log(this.params);
+    });
   }
 
 

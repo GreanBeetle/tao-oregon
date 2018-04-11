@@ -8,7 +8,6 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
-
 import { AuthComponent } from './auth/auth.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthenticationService } from './authentication.service';
@@ -22,7 +21,11 @@ import { SearchPipe } from './search.pipe';
 import { SearchComponent } from './search/search.component';
 
 import { GoogleMapComponent } from './google-map/google-map.component';
+
 import { WeatherComponent } from './weather/weather.component';
+
+import { DistanceService } from './distance.service';
+import { HaversineService } from 'ng2-haversine';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -57,7 +60,13 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthenticationService, UserService, ReportService],
+  providers: [
+    AuthenticationService,
+    UserService,
+    ReportService,
+    DistanceService,
+    HaversineService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
