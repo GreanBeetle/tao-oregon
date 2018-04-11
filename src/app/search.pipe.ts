@@ -7,13 +7,17 @@ import { Trail } from './models/trail.model';
 export class SearchPipe implements PipeTransform {
 
   transform(input: Trail[], params) {
-    let output: Trail[] = [];
-
+    let output: Trail[] = input;
     if(params){
-      output = input.filter(trail => trail.name.toLowerCase().includes(params.name.toLowerCase()))
-      return output;
-    } else {
-      return input;
+      if(params.name != ""){
+        output = output.filter(trail => trail.name.toLowerCase().includes(params.name.toLowerCase()))
+      }
+      if(params.trailLength != ""){
+        output = output.filter(trail =>
+          trail.length < params.trailLength
+        )
+      }
     }
+    return output;
   }
 }

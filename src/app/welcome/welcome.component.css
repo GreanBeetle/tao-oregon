@@ -1,0 +1,7 @@
+.jumbotron {
+  background-image: url('https://images.unsplash.com/photo-1506389229804-2422a17d040c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f1ba7a649d428043f559d4ca35215e2a&auto=format&fit=crop&w=3447&q=80');
+  text-align: center;
+  background-size: cover;
+  padding: 0;
+  height: 500px;
+}
