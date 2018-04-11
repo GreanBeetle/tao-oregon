@@ -1,6 +1,12 @@
 <form class="search" action="index.html" method="post">
-  <label>Name:</label>
+  <label>Trail Name:</label>
   <input #searchName type="text" id="searchName">
-  <button (click)="searchTrails(searchName.value)"class="btn btn-info">SEARCH TRAILS!</button>
+  <label>User Location:</label>
+  <input #userLocation type="text" id="searchName">
+  <label>Max Distance From:</label>
+  <input #maxDistance type="number" id="searchName">
+  <label>Max Trail Length:</label>
+  <input #trailLength type="number" id="searchName">
+  <button (click)="searchTrails(searchName.value, userLocation.value, maxDistance.value, trailLength.value); getLatLon(userLocation.value)"class="btn btn-info">SEARCH TRAILS!</button>
 </form>
 <app-list-of-trails [childParams]="params"></app-list-of-trails>

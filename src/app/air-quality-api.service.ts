@@ -9,7 +9,7 @@ export class AirQualityApiService {
   constructor(private http: Http) { }
 
   getAirQualityByLatLong(lat:string, lng:string) {
-    return this.http.get(`http://api.airvisual.com/v2/nearest_city?lat=${lat}&lon=${lng}&key=${airPollutionKey}`)
+    return this.http.get(`http://api.airvisual.com/v2/nearest_city?lat=${lat}&lon=${lng}&key=${airPollutionKey}`);
   };
 
 }

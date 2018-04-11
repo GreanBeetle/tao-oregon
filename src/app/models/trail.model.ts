@@ -1,43 +1,26 @@
-import { Object } from '../models/object.model';
+// import { Object } from '../models/object.model';
 
 export class Trail {
-  public report: string = '';
-  public id;
-  public longitude;
-  public latitude;
-  public name;
-  public $key;
-  public distanceFromPoint;
-  constructor(public dataObject: Object) {
+  // public report: string = '';
+  public id: string;
+  public longitude: number;
+  public latitude: number;
+  public name: string;
+  public $key: string;
+  public distanceFromPoint: number;
+  public length: number;
+  // public longitude;
+  // public latitude;
+  // public name;
+  // public $key;
+  // public distanceFromPoint;
+  constructor(dataObject: any) {
+    this.length = dataObject.length;
     this.id = dataObject.id;
     this.longitude = dataObject.longitude;
     this.latitude = dataObject.latitude;
     this.name = dataObject.name;
     this.$key = dataObject.$key;
-    this.distanceFromPoint = null;
-    // public id: number,
-    // public name: string,
-    // public type: string,
-    // public summary: string,
-    // public difficulty: string,
-    // public stars: number,
-    // public starVotes: number,
-    // public location: string,
-    // public url: string,
-    // public imgSqSmall: string,
-    // public imgSmall: string,
-    // public imgSmallMed: string,
-    // public imgMedium: string,
-    // public length: number,
-    // public ascent: number,
-    // public descent: number,
-    // public high: number,
-    // public low: number,
-    // public longitude: number,
-    // public latitude: number,
-    // public conditionStatus: string,
-    // public conditionDetails: string,
-    // public conditionDate: string,
   }
 }
 

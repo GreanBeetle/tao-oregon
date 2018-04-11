@@ -22,7 +22,6 @@ import { SearchPipe } from './search.pipe';
 import { SearchComponent } from './search/search.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
 
-
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
