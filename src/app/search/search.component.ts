@@ -13,6 +13,7 @@ import { GeoCodeApiService } from '../geo-code-api.service';
 })
 export class SearchComponent implements OnInit {
   params: Object = null;
+  latLon;
 
 
   constructor(private trailService: TrailService, private geoCodeService: GeoCodeApiService) { }
@@ -23,7 +24,9 @@ export class SearchComponent implements OnInit {
 
   getLatLon(location: any) {
     this.geoCodeService.getLatLon(location).subscribe(result =>{
-      console.log(result.json());
+      this.latLon = result.json();
+      console.log(this.latLon);
+      return latLon;
     })
   }
 
