@@ -1,3 +1,11 @@
+
+
 agm-map {
-  height: 300px; 
+  height: 600px;
+  margin-right: 20%;
+  margin-left: 20%
+}
+
+.card {
+  border: none;
 }
