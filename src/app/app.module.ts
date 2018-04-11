@@ -20,6 +20,7 @@ import { WriteReportComponent } from './write-report/write-report.component';
 import { ReportService } from './report.service';
 import { SearchPipe } from './search.pipe';
 import { SearchComponent } from './search/search.component';
+import { WeatherComponent } from './weather/weather.component';
 
 
 export const firebaseConfig = {
@@ -41,7 +42,8 @@ export const firebaseConfig = {
     AirQualityComponent,
     WriteReportComponent,
     SearchPipe,
-    SearchComponent
+    SearchComponent,
+    WeatherComponent
 
   ],
   imports: [

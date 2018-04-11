@@ -8,3 +8,5 @@ export const masterFirebaseConfig = {
 };
 
 export const airPollutionKey = "DZfePHJRuv7H9TjbR"
+
+export const darkSkyKey = "13c52a5126218f23c9daa04e90055025"
