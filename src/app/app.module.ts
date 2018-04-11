@@ -20,7 +20,9 @@ import { WriteReportComponent } from './write-report/write-report.component';
 import { ReportService } from './report.service';
 import { SearchPipe } from './search.pipe';
 import { SearchComponent } from './search/search.component';
+
 import { GoogleMapComponent } from './google-map/google-map.component';
+import { WeatherComponent } from './weather/weather.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -42,7 +44,8 @@ export const firebaseConfig = {
     WriteReportComponent,
     SearchPipe,
     SearchComponent,
-    GoogleMapComponent
+    GoogleMapComponent,
+    WeatherComponent
 
   ],
   imports: [

@@ -12,8 +12,7 @@ import { GeoCodeApiService } from '../geo-code-api.service';
   providers: [ TrailService, GeoCodeApiService ]
 })
 export class SearchComponent implements OnInit {
-  params: Object = null;
-  latLon;
+  params: Object = {};
 
 
   constructor(private trailService: TrailService, private geoCodeService: GeoCodeApiService) { }
