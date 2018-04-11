@@ -44,6 +44,7 @@ export class DistanceService {
 
     let miles = this.haversineService.getDistanceInMiles(trail, user);
     console.log("HERE ARE YOUR MILES: ", miles)
+    return miles; 
   }
 
 }
