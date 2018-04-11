@@ -34,7 +34,6 @@ export class TrailDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.forEach((urlParameters)=>{
       this.trailId = urlParameters['id'];
-      console.log(this.trailId)
     });
     this.trailService.getTrailById(this.trailId).subscribe( result => {
       this.trailToDisplay = result;
@@ -55,7 +54,6 @@ export class TrailDetailComponent implements OnInit {
       this.reportsToDisplay = results;
       this.specificReportsToDisplay =  this.reportService.displayReports(this.reportsToDisplay, this.trailToDisplay);
     });
-      console.log('array to see2', this.specificReportsToDisplay)
     // this.trailToDisplay = this.trailService.getTrailById(this.trailId);
     // console.log(this.trailToDisplay);
     // var mapProp = {

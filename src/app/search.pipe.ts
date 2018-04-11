@@ -22,7 +22,7 @@ export class SearchPipe implements PipeTransform {
       if(params.userLocation != "" && params.maxDistance != ""){
         // console.log(this.distanceService.distanceBetween2(trail.coordinates, params.userLocation))
         output = output.filter(trail =>
-          this.distanceService.distanceBetween2(trail.coordinates, params.userLocation) < params.maxDistance
+          this.distanceService.distanceBetween(trail.coordinates, params.userLocation) < params.maxDistance
         )
       }
     }

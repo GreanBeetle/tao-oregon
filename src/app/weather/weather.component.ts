@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DarkSkyApiService } from '../dark-sky-api.service';
+import { darkSkyKey } from '../api-keys'
 
 @Component({
   selector: 'app-weather',
@@ -13,13 +14,13 @@ export class WeatherComponent implements OnInit {
 
   constructor(private darkSkyApi: DarkSkyApiService) { }
 
-    getWeather(lat:string, lng:string) {
-      this.weatherReport = this.darkSkyApi.getWeather(lat, lng)
+    getCurrentWeather(lat:string, lng:string, API_Key:string) {
+      this.weatherReport = this.darkSkyApi.getWeather(lat, lng, API_Key)
       console.log(this.weatherReport);
       }
 
   ngOnInit() {
-    this.getWeather(this.childLatLng[0], this.childLatLng[1]);
+    this.getCurrentWeather(this.childLatLng[0], this.childLatLng[1], darkSkyKey);
   }
 
 }

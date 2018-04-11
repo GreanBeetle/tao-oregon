@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HaversineService, GeoCoord } from "ng2-haversine";
+// import { HaversineService, GeoCoord } from "ng2-haversine";
 
 @Injectable()
 export class DistanceService {
 
-  constructor(private haversineService: HaversineService) { }
+  constructor() { }
 
   degreeToRadius(deg) {
     return deg * (Math.PI/180);
@@ -30,25 +30,25 @@ export class DistanceService {
   }
 
   // HAVERSINE OPTION 2
-  distanceBetween2(trailLocation, userLocation){
-
-    let trail : GeoCoord = {
-      latitude: trailLocation.lat,
-      longitude: trailLocation.lng
-    }
-
-    let user : GeoCoord = {
-      latitude: userLocation.lat,
-      longitude: userLocation.lng
-    }
-
-    let miles = this.haversineService.getDistanceInMiles(trail, user);
-    console.log("HERE ARE YOUR MILES: ", miles)
-<<<<<<< HEAD
-    return miles;
-=======
-    return miles; 
->>>>>>> googleapi
-  }
+//   distanceBetween2(trailLocation, userLocation){
+//
+//     let trail : GeoCoord = {
+//       latitude: trailLocation.lat,
+//       longitude: trailLocation.lng
+//     }
+//
+//     let user : GeoCoord = {
+//       latitude: userLocation.lat,
+//       longitude: userLocation.lng
+//     }
+//
+//     let miles = this.haversineService.getDistanceInMiles(trail, user);
+//     console.log("HERE ARE YOUR MILES: ", miles)
+// <<<<<<< HEAD
+//     return miles;
+// =======
+//     return miles;
+// >>>>>>> googleapi
+//   }
 
 }

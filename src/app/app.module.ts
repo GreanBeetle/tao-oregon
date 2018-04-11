@@ -25,7 +25,8 @@ import { GoogleMapComponent } from './google-map/google-map.component';
 import { WeatherComponent } from './weather/weather.component';
 
 import { DistanceService } from './distance.service';
-import { HaversineService } from 'ng2-haversine';
+import { OpenWeatherComponent } from './open-weather/open-weather.component';
+// import { HaversineService } from 'ng2-haversine';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -48,7 +49,8 @@ export const firebaseConfig = {
     SearchPipe,
     SearchComponent,
     GoogleMapComponent,
-    WeatherComponent
+    WeatherComponent,
+    OpenWeatherComponent
 
   ],
   imports: [
@@ -65,7 +67,7 @@ export const firebaseConfig = {
     UserService,
     ReportService,
     DistanceService,
-    HaversineService
+    // HaversineService
   ],
   bootstrap: [AppComponent]
 })
