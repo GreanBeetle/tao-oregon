@@ -3,8 +3,16 @@
   {{(trailToDisplay)?.latitude}}
   {{(trailToDisplay)?.longitude}}
 </p>
+<div class="card report" *ngFor="let singleReport of specificReportsToDisplay">
+  <p>Trail Report: </p>
+
+  <div class="card-body">
+   <p>{{singleReport}}</p>
+ </div>
+</div>
 
 <div id="gmap" #googlemap ></div>
 
 
 <app-air-quality *ngIf="latLng" [childLatLng]="latLng"></app-air-quality>
+<app-weather *ngIf="latLng" [childLatLng]="latLng"></app-weather>

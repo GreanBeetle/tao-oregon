@@ -5,6 +5,7 @@ import { Trail } from '../models/trail.model';
 import { Location } from '@angular/common';
 import { FirebaseObjectObservable} from 'angularfire2/database';
 import { ViewChild } from '@angular/core';
+import { ReportService  } from '../report.service'
 import { } from '@types/googlemaps';
 
 
@@ -12,19 +13,22 @@ import { } from '@types/googlemaps';
   selector: 'app-trail-detail',
   templateUrl: './trail-detail.component.html',
   styleUrls: ['./trail-detail.component.css'],
-  providers: [TrailService]
+  providers: [TrailService, ReportService]
 })
 export class TrailDetailComponent implements OnInit {
   trailId: string;
   latLng: string[] = null;
   trailToDisplay;
+  reportsToDisplay;
+  specificReportsToDisplay;
   @ViewChild('googlemap') gmapElement: any;
   map: google.maps.Map;
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private trailService: TrailService
+    private trailService: TrailService,
+    private reportService: ReportService
   ) { }
 
   ngOnInit() {
@@ -47,6 +51,11 @@ export class TrailDetailComponent implements OnInit {
         title: 'Hello World!'
       });
     })
+    this.reportService.getReports().subscribe(results => {
+      this.reportsToDisplay = results;
+      this.specificReportsToDisplay =  this.reportService.displayReports(this.reportsToDisplay, this.trailToDisplay);
+    });
+      console.log('array to see2', this.specificReportsToDisplay)
     // this.trailToDisplay = this.trailService.getTrailById(this.trailId);
     // console.log(this.trailToDisplay);
     // var mapProp = {

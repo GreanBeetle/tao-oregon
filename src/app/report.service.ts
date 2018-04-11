@@ -5,6 +5,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class ReportService {
   reports: FirebaseListObservable<any[]>
+  specificReports;
 
   constructor(private database: AngularFireDatabase) {
     this.reports = database.list('reports');
@@ -18,6 +19,18 @@ export class ReportService {
     this.reports.push(theReport);
     console.log(theReport);
   }
+
+  displayReports(resuls, theTrailId) {
+    let specificReportsHere = [];
+    resuls.forEach(function(object) {
+      if(object.trailId == theTrailId.$key) {
+        specificReportsHere.push(object.reportContent);
+      }
+    })
+    console.log('result from service', specificReportsHere);
+    return specificReportsHere;
+  }
+
 
 
 }

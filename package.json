@@ -25,10 +25,12 @@
     "angularfire2": "^4.0.0-rc0",
     "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
+    "cors": "^2.8.4",
     "firebase": "^3.9.0",
     "jquery": "^3.3.1",
     "npm": "^5.8.0",
     "popper.js": "^1.14.1",
+    "requestify": "^0.2.5",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
