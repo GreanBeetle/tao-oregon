@@ -44,11 +44,8 @@ export const firebaseConfig = {
     WriteReportComponent,
     SearchPipe,
     SearchComponent,
-<<<<<<< HEAD
-    GoogleMapComponent
-=======
+    GoogleMapComponent,
     WeatherComponent
->>>>>>> dl
 
   ],
   imports: [
