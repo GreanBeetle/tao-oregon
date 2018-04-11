@@ -9,6 +9,7 @@ export class Trail {
   public $key: string;
   public distanceFromPoint: number;
   public length: number;
+  public coordinates: object;
   // public longitude;
   // public latitude;
   // public name;
@@ -21,6 +22,7 @@ export class Trail {
     this.latitude = dataObject.latitude;
     this.name = dataObject.name;
     this.$key = dataObject.$key;
+    this.coordinates = {lat: dataObject.latitude, lng: dataObject.longitude};
   }
 }
 
