@@ -1,5 +1,13 @@
+import { Object } from '../models/object.model';
+
 export class Trail {
   public report: string = '';
+  public id;
+  public longitude;
+  public latitude;
+  public name;
+  public $key;
+  public distanceFromPoint;
   constructor(public dataObject: Object) {
     this.id = dataObject.id;
     this.longitude = dataObject.longitude;

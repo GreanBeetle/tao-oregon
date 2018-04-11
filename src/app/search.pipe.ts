@@ -8,11 +8,10 @@ export class SearchPipe implements PipeTransform {
 
   transform(input: Trail[], params) {
     let output: Trail[] = [];
-
     if(params){
       output = input.filter(trail => trail.name.toLowerCase().includes(params.name.toLowerCase()))
       return output;
-    } else{
+    } else {
       return input;
     }
   }
