@@ -20,11 +20,12 @@ import { ReportService } from './report.service';
 import { SearchPipe } from './search.pipe';
 import { SearchComponent } from './search/search.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
-import { WeatherComponent } from './weather/weather.component';
 import { DistanceService } from './distance.service';
 import { HaversineService } from 'ng2-haversine';
 import { AgmCoreModule } from '@agm/core';
 import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
+import { OpenWeatherComponent } from './open-weather/open-weather.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -46,7 +47,7 @@ export const firebaseConfig = {
     SearchPipe,
     SearchComponent,
     GoogleMapComponent,
-    WeatherComponent
+    OpenWeatherComponent
 
   ],
   imports: [
