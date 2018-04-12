@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DarkSkyApiService } from '../dark-sky-api.service';
+// import { DarkSkyApiService } from '../dark-sky-api.service';
+import { OpenWeatherApiService } from '../open-weather-api.service';
 
 @Component({
   selector: 'app-weather',
