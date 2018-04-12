@@ -1,8 +1,13 @@
 <div class="card">
   <p>Current Temperature: {{currentTemp}} °F</p>
   <p>Current Weather: {{currentWeatherDesc}}</p>
-  <div class="card" *ngFor="let single of forecastArr">
-    <span>Show temp: {{single.Temp}}</span>
-    <span>Show temp: {{single.Time}}</span>
+  <hr>
+  <div class="forecast">
+    <p>Forecast for next 5 days</p>
+    <div class="card" *ngFor="let single of forecastArr">
+      <span>Show temp: {{single.main.temp}} °F</span>
+      <span>Show weather: {{single.weather[0].description}}</span>
+      <span>Show converted time: {{convertDate(single.dt).getHours()-7}}am </span>
+    </div>
   </div>
 </div>

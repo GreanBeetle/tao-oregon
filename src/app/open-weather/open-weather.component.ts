@@ -15,8 +15,6 @@ export class OpenWeatherComponent implements OnInit {
   forecastDate: string;
   forecastArr: number[] = [];
 
-
-
   constructor(private openWeatherService: OpenWeatherService) { }
 
   ngOnInit() {
@@ -30,21 +28,15 @@ export class OpenWeatherComponent implements OnInit {
        console.log(results);
        let list = results.list;
        var i;
-       for ( i=0; i<list.length; i++) {
-          console.log(list[i].main.temp);
-          this.forecastArr.push({Temp: list[i].main.temp, Time : list[i].dt_txt});
+       for ( i=0; i<list.length; i+=8) {
+          this.forecastArr.push(list[i]);
        }
-       console.log(this.forecastArr);
-      // console.log(this.weatherForecast.list[0].dt_txt);
-
-
   });
   }
 
-  getCurrentForecast() {
-    for (let i=0; i<this.weatherForecast.list.length; i += 8) {
-      this.forecastArr.push(this.weatherForecast.list[i]);
-    }
-    console.log(this.forecastArr);
+  convertDate(unixDate) {
+    let date = new Date((unixDate*1000);
+    console.log(date);
+    return date;
   }
 }
