@@ -1,4 +1,8 @@
 <div class="card">
   <p>Current Temperature: {{currentTemp}} °F</p>
   <p>Current Weather: {{currentWeatherDesc}}</p>
+  <div class="card" *ngFor="let single of forecastArr">
+    <span>Show temp: {{single.Temp}}</span>
+    <span>Show temp: {{single.Time}}</span>
+  </div>
 </div>

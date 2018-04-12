@@ -11,4 +11,8 @@ export class OpenWeatherService {
   getWeather(lat:string, lng:string) {
     return this.http.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&APPID=${openWeatherKey}&units=imperial`)
   }
+
+  getForecast(lat:string, lng:string) {
+    return this.http.get(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&APPID=${openWeatherKey}&units=imperial`)
+  }
 }
