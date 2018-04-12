@@ -25,6 +25,8 @@ import { DistanceService } from './distance.service';
 import { HaversineService } from 'ng2-haversine';
 import { AgmCoreModule } from '@agm/core';
 import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
+import { OpenWeatherComponent } from './open-weather/open-weather.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -46,7 +48,8 @@ export const firebaseConfig = {
     SearchPipe,
     SearchComponent,
     GoogleMapComponent,
-    WeatherComponent
+    WeatherComponent,
+    OpenWeatherComponent
 
   ],
   imports: [
