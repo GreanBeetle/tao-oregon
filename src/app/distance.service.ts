@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-// import { HaversineService, GeoCoord } from "ng2-haversine";
+import { HaversineService, GeoCoord } from "ng2-haversine";
 
 @Injectable()
 export class DistanceService {
 
-  constructor() { }
+  constructor(public haversineService: HaversineService) { }
 
   degreeToRadius(deg) {
     return deg * (Math.PI/180);

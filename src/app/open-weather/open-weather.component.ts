@@ -15,9 +15,9 @@ export class OpenWeatherComponent implements OnInit {
 
   ngOnInit() {
     this.openWeatherService.getWeather(this.childLatLng[0],this.childLatLng[1]).subscribe(result => {
-      this.currentWeather = result.json().main.temp
+      this.currentWeather = result.json().main.temp;
     console.log('open weather ',this.currentWeather)
-    }
+  }); 
   }
 
 }
