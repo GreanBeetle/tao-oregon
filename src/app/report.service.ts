@@ -27,7 +27,6 @@ export class ReportService {
         specificReportsHere.push(object.reportContent);
       }
     })
-    console.log('result from service', specificReportsHere);
     return specificReportsHere;
   }
 
