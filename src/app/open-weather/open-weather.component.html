@@ -5,9 +5,10 @@
   <div class="forecast">
     <p>Forecast for next 5 days</p>
     <div class="card" *ngFor="let single of forecastArr">
-      <span>Show temp: {{single.main.temp}} °F</span>
-      <span>Show weather: {{single.weather[0].description}}</span>
-      <span>Show converted time: {{convertDate(single.dt).getHours()-7}}am </span>
+      <span>Date: {{convertDate(single.dt).getMonth() + 1}}/{{convertDate(single.dt).getDate()}} {{convertDate(single.dt).getHours()-7}}am </span>
+      <span>High: {{single.main.temp_max}} °F</span>
+      <span>Low: {{single.main.temp_min}} °F</span>
+      <span>Weather: {{single.weather[0].description}}</span>
     </div>
   </div>
 </div>

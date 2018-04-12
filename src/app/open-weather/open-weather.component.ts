@@ -31,12 +31,16 @@ export class OpenWeatherComponent implements OnInit {
        for ( i=0; i<list.length; i+=8) {
           this.forecastArr.push(list[i]);
        }
+       console.log(this.forecastArr);
   });
   }
 
   convertDate(unixDate) {
     let date = new Date((unixDate*1000);
-    console.log(date);
     return date;
+  }
+
+  formatForecastDate(date) {
+
   }
 }
