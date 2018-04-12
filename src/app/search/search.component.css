@@ -1,0 +1,31 @@
+
+
+#searchAndTrailBox {
+  border: 2px solid black;
+
+  padding: 5px;
+}
+
+
+#searchBox {
+  text-align: center;
+  display: block;
+  margin-right: 5px;  
+}
+
+.row{
+  margin-left: auto;
+}
+
+.card {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#search {
+  width: 100px;
+}
+
+button {
+  margin: 0 auto;
+}
