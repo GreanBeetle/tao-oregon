@@ -20,7 +20,6 @@ import { ReportService } from './report.service';
 import { SearchPipe } from './search.pipe';
 import { SearchComponent } from './search/search.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
-import { WeatherComponent } from './weather/weather.component';
 import { DistanceService } from './distance.service';
 import { HaversineService } from 'ng2-haversine';
 import { AgmCoreModule } from '@agm/core';
@@ -48,7 +47,6 @@ export const firebaseConfig = {
     SearchPipe,
     SearchComponent,
     GoogleMapComponent,
-    WeatherComponent,
     OpenWeatherComponent
 
   ],

@@ -9,15 +9,17 @@ import { OpenWeatherService } from '../open-weather.service'
 })
 export class OpenWeatherComponent implements OnInit {
   @Input() childLatLng: string;
-  currentWeather: string;
+  currentTemp: string;
+  currentWeatherDesc: string;
+
 
   constructor(private openWeatherService: OpenWeatherService) { }
 
   ngOnInit() {
     this.openWeatherService.getWeather(this.childLatLng[0],this.childLatLng[1]).subscribe(result => {
-      this.currentWeather = result.json().main.temp;
-    console.log('open weather ',this.currentWeather)
-  }); 
+      this.currentTemp = result.json().main.temp;
+      this.currentWeatherDesc = result.json().weather[0].description;
+  });
   }
 
 }
