@@ -1,10 +1,15 @@
 .card {
   height: 500px;
   width: 500px;
-  margin: 0 auto;
   padding: 20px;
   text-align: center;
+  margin: 0 auto;
+  margin-top: 15%;
 }
+
+
+
+
 
 input {
   margin: 10px;

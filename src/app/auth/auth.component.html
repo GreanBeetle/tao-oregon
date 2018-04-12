@@ -1,7 +1,8 @@
-<div *ngIf="hasAccount" class="card">
-  <div class="card-header">
-    <h1>SIGN IN</h1>
-  </div>
+
+  <div *ngIf="hasAccount" class="card">
+    <div class="card-header">
+      <h1>SIGN IN</h1>
+    </div>
     <div class="form">
       <div class="form-group">
         <small class="labels" for="signinEmail">EMAIL: </small>
@@ -13,19 +14,18 @@
     <button (click)="signIn(emailSignIn.value, passwordSignIn.value); emailSignIn.value=''; passwordSignIn.value=''" id="btn-create-user">SIGN IN</button>
     <button (click)="googleLogin()" id="btn-google"></button>
     <small>Don't have an account? <a (click)="toggleHasAccount()" id="signUp">SIGN UP</a></small>
-</div>
+  </div>
 
-<div *ngIf="!hasAccount" class="card">
-  <div class="card-header">
-    <h1>SIGN UP</h1>
+  <div *ngIf="!hasAccount" class="card">
+    <div class="card-header">
+      <h1>SIGN UP</h1>
+    </div>
+    <div class="card-body">
+      <small class="labels" for="email">EMAIL: </small><br>
+      <input #email type="text" name="email" value=""><br>
+      <small class="labels" for="password">PASSWORD: </small><br>
+      <input #password type="password" name="password" value=""><br><br>
+      <button (click)="createUser(email.value, password.value); email.value=''; password.value=''" id="btn-create-user">SIGN UP</button><br><br>
+      <small><a id = "backToSignIn" (click)="toggleHasAccount()">GO BACK TO SIGN IN</a></small>
+    </div>
   </div>
-  <div class="card-body">
-    <small class="labels" for="email">EMAIL: </small>
-    <input #email type="text" name="email" value="">
-    <small class="labels" for="password">PASSWORD: </small>
-    <input #password type="password" name="password" value="">
-    <br>
-    <button (click)="createUser(email.value, password.value); email.value=''; password.value=''" id="btn-create-user">SIGN UP</button>
-    <small><a id = "backToSignIn" (click)="toggleHasAccount()">GO BACK TO SIGN IN</a></small>
-  </div>
-</div>
