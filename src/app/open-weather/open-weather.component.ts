@@ -36,11 +36,7 @@ export class OpenWeatherComponent implements OnInit {
   }
 
   convertDate(unixDate) {
-    let date = new Date((unixDate*1000);
+    let date = new Date(unixDate*1000);
     return date;
-  }
-
-  formatForecastDate(date) {
-
   }
 }

@@ -36,6 +36,10 @@ const appRoutes: Routes = [
   {
     path: 'report/:id',
     component: WriteReportComponent
+  },
+  {
+    path: 'trails/:id/reportForm',
+    component: WriteReportComponent
   }
 
 

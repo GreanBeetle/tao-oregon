@@ -1,20 +1,22 @@
+<app-open-weather *ngIf="latLng" [childLatLng]="latLng"></app-open-weather>
+<br>
 <p>
   {{(trailToDisplay)?.name}}
   {{(trailToDisplay)?.latitude}}
   {{(trailToDisplay)?.longitude}}
 </p>
-<div class="card report" *ngFor="let singleReport of specificReportsToDisplay">
-  <p>Trail Report: </p>
 
+<div class="card report" *ngFor="let singleReport of specificReportsToDisplay">
+  <div class="card-header">
+    <h3>Trail Reports for {{(trailToDisplay)?.name}}</h3>
+  </div>
   <div class="card-body">
-   <p>{{singleReport}}</p>
+   <h5>{{singleReport}}</h5>
  </div>
 </div>
-
+<button class="btn btn-success" routerLink="reportForm" type="button" name="button">Leave a Report</button>
 <div id="gmap" #googlemap ></div>
 
 
 <app-air-quality *ngIf="latLng" [childLatLng]="latLng"></app-air-quality>
-<br>
-<app-open-weather *ngIf="latLng" [childLatLng]="latLng"></app-open-weather>
 <br>

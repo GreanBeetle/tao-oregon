@@ -1,14 +1,26 @@
+<h3>Current Weather Report:</h3>
 <div class="card">
   <p>Current Temperature: {{currentTemp}} °F</p>
   <p>Current Weather: {{currentWeatherDesc}}</p>
-  <hr>
+</div>
+<h3>5 Day Trail Forecast:</h3>
   <div class="forecast">
-    <p>Forecast for next 5 days</p>
-    <div class="card" *ngFor="let single of forecastArr">
-      <span>Date: {{convertDate(single.dt).getMonth() + 1}}/{{convertDate(single.dt).getDate()}} {{convertDate(single.dt).getHours()-7}}am </span>
-      <span>High: {{single.main.temp_max}} °F</span>
-      <span>Low: {{single.main.temp_min}} °F</span>
-      <span>Weather: {{single.weather[0].description}}</span>
-    </div>
-  </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th *ngFor="let single of forecastArr">
+            <span>Date: {{convertDate(single.dt).getMonth() + 1}}/{{convertDate(single.dt).getDate()}} {{convertDate(single.dt).getHours()-7}}am </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let single of forecastArr">
+            <span>High: {{single.main.temp_max}} °F</span>
+            <span>Low: {{single.main.temp_min}} °F</span>
+            <span>Weather: {{single.weather[0].description}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 </div>
