@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Steelfish";
+  src: url("./steelfish.ttf");
+}
+
+@font-face {
+  font-family: "arborCrest";
+  src: url("./arborcrest.ttf");
+}
+
+* {
+  font-family: "arborCrest";
+}
+
+body{
+  padding: 0px 75px;
+}

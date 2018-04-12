@@ -1,13 +1,50 @@
-<form class="search" action="index.html" method="post">
-  <label>Trail Name:</label>
-  <input #searchName type="text" id="searchName">
-  <label>User Location:</label>
-  <input #userLocation type="text" id="searchName">
-  <label>Max Distance From:</label>
-  <input #maxDistance type="number" id="searchName">
-  <label>Max Trail Length:</label>
-  <input #trailLength type="number" id="searchName">
-  <button (click)="searchTrails(searchName.value, userLocation.value, maxDistance.value, trailLength.value)"class="btn btn-info">SEARCH TRAILS!</button>
-</form>
-<app-google-map [childParams]="params"></app-google-map>
-<app-list-of-trails [childParams]="params"></app-list-of-trails>
+
+<div class="row">
+  <div class="col-md-4" id="searchAndTrailBox">
+
+
+
+    <div class="row" id="searchBox">
+      <div class="card">
+        <div class="card-header">
+          <h3>SEARCH TRAILS</h3>
+        </div>
+        <div class="card-body">
+          <form class="search" action="index.html" method="post">
+            <div class="row">
+              <span><label>Trail Name:&ensp;</label><input #searchName type="text" id="searchName"></span>
+            </div><br>
+            <div class="row">
+              <label>Show me trails&ensp;</label>
+              <input #maxDistance type="number" id="search" ><span> &ensp;miles from&ensp;</span>
+              <input #userLocation type="text" id="search">
+            </div><br>
+            <div class="row">
+              <label>Max Trail Length:&ensp;</label>
+              <input #trailLength type="number" id="search">
+            </div><br>
+            <div class="row">
+              <button (click)="searchTrails(searchName.value, userLocation.value, maxDistance.value, trailLength.value)"class="btn btn-info">SEARCH TRAILS!</button>
+            </div>
+
+          </form>
+        </div>
+      </div> <!-- card -->
+    </div> <!-- searchBox -->
+
+    <br>
+
+    <div class="row" id="trailList">
+      <app-list-of-trails [childParams]="params"></app-list-of-trails>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="col-md-8" id="mapBox">
+    <app-google-map [childParams]="params"></app-google-map>
+  </div>
+</div>

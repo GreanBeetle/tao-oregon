@@ -1,23 +1,31 @@
 
 <div id="navwell">
-  <div class="navbar">
-    <h3><a routerLink="" class="links">HOME</a></h3>
-    <h3><a routerLink="trails" class="links">TRAILS</a></h3>
 
-    <div *ngIf="!isLoggedIn">
-      <h3><a routerLink="auth" class="links">LOGIN</a></h3>
+  <div class="navbar">
+    <div class="logo">
+      <img id="tree" src="https://cdn.pixabay.com/photo/2012/04/16/13/55/silhouette-36084_1280.png">
     </div>
 
-    <div *ngIf="isLoggedIn">
-      <div class="row">
-        <div class="col-sm-6">
-          <h3><a (click)="signOut()" class="links">LOGOUT</a></h3>
-        </div>
-        <div class="col-sm-6">
-          <h3><a routerLink="auth" class="links">{{user?.email}}</a></h3>
+      <h3><a routerLink="" class="links">HOME</a></h3>
+      <h3><a routerLink="trails" class="links">TRAILS</a></h3>
+
+      <div *ngIf="!isLoggedIn">
+        <h3><a routerLink="auth" class="links">LOGIN</a></h3>
+      </div>
+
+      <div *ngIf="isLoggedIn">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3><a (click)="signOut()" class="links">LOGOUT</a></h3>
+          </div>
+          <div class="col-sm-6">
+            <h3><a routerLink="auth" class="links">{{user?.email}}</a></h3>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="logo">
+        <img id="tree" src="https://cdn.pixabay.com/photo/2012/04/16/13/55/silhouette-36084_1280.png">
+      </div>
 
   </div>
 </div>
