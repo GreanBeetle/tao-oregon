@@ -1,6 +1,6 @@
 ## Live Version
 
-https://taooregon-dd774.firebaseapp.com
+https://taooregon-dd774.firebaseapp.com/
 
 ## Overall objectives
 * Functionality for user to add comment which will be referred to as adding a report for a particular trail
