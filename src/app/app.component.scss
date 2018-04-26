@@ -32,6 +32,17 @@
 //   height: 70px;
 // }
 
+.navbar-item {
+  margin: 5px;
+  span {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.navbar-item:hover {
+  cursor: pointer; 
+}
 
 
 
