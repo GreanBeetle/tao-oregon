@@ -12,7 +12,12 @@ import { GeoCodeApiService } from '../geo-code-api.service';
   providers: [ TrailService, GeoCodeApiService ]
 })
 export class SearchComponent {
-  params: Object = null;
+  params: Object = {
+    name: "",
+    userLocation: {lat: 44.0582, lng: -121.3153},
+    maxDistance: 0,
+    trailLength: 0
+  };
 
   constructor(private trailService: TrailService, private geoCodeService: GeoCodeApiService) { }
 
@@ -23,7 +28,7 @@ export class SearchComponent {
           name: name,
           userLocation: response.json().results[0].geometry.location,
           maxDistance: maxDistance,
-          trailLength: trailLength,
+          trailLength: trailLength
         };
 
       });
@@ -32,7 +37,7 @@ export class SearchComponent {
         name: name,
         trailLength: trailLength,
         userLocation: userLocation,
-        maxDistance: maxDistance,
+        maxDistance: maxDistance
       };
     }
   }

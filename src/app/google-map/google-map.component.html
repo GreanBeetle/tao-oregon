@@ -1,8 +1,8 @@
 <div class="card">
 
-  <agm-map [latitude]="lat" [longitude]="lng">
+  <agm-map [latitude]="childParams.userLocation.lat" [longitude]="childParams.userLocation.lng" >
     <agm-marker-cluster [imagePath]="imagepath">
-      <agm-marker *ngFor="let trail of trails | search:childParams" [latitude]="trail.latitude" [longitude]="trail.longitude"></agm-marker>
+      <agm-marker *ngFor="let trail of trails | search:childParams" [latitude]="trail.latitude" [longitude]="trail.longitude" ></agm-marker>
     </agm-marker-cluster>
   </agm-map>
 </div>
