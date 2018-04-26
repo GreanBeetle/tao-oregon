@@ -23,6 +23,7 @@
         <a routerLink="auth" class="links">LOGIN</a>
       </div>
       <div class="navbar-item" *ngIf="isLoggedIn">
+        <span (click)="goToMyTrails(user.uid)" class="links">MY TRAILS</span>
         <span (click)="signOut()" class="links">LOGOUT</span>
         <span routerLink="auth" class="links">{{user?.email}}</span>
       </div>

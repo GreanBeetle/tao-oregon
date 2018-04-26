@@ -25,6 +25,7 @@ import { HaversineService } from 'ng2-haversine';
 import { AgmCoreModule } from '@agm/core';
 import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 import { OpenWeatherComponent } from './open-weather/open-weather.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 
 export const firebaseConfig = {
@@ -47,7 +48,8 @@ export const firebaseConfig = {
     SearchPipe,
     SearchComponent,
     GoogleMapComponent,
-    OpenWeatherComponent
+    OpenWeatherComponent,
+    UserDashboardComponent
 
   ],
   imports: [
