@@ -1,32 +1,46 @@
+<!-- BULMA NAVBAR -->
 
-<div id="navwell">
+<div class="navbar">
 
-  <div class="navbar">
-    <div class="logo">
+  <!-- left side -->
+  <div class="navbar-brand">
+    <div class="navbar-item">
       <img id="tree" src="/assets/img/tree.png">
     </div>
+    <div class="navbar-item">
+      <a routerLink="" class="links">HOME</a>
+    </div>
+    <div class="navbar-item">
+      <a routerLink="" class="links">HOME</a>
+    </div>
+  </div>
 
-      <h3><a routerLink="" class="links">HOME</a></h3>
-      <h3><a routerLink="trails" class="links">TRAILS</a></h3>
+  <!-- right side -->
+  <div class="navbar-menu">
+    <div class="navbar-end">
 
+      <!-- not logged in -->
       <div *ngIf="!isLoggedIn">
-        <h3><a routerLink="auth" class="links">LOGIN</a></h3>
-      </div>
-
-      <div *ngIf="isLoggedIn">
-        <div class="row">
-          <div class="col-sm-6">
-            <h3><a (click)="signOut()" class="links">LOGOUT</a></h3>
-          </div>
-          <div class="col-sm-6">
-            <h3><a routerLink="auth" class="links">{{user?.email}}</a></h3>
-          </div>
+        <div class="navbar-item">
+          <a routerLink="auth" class="links">LOGIN</a>
         </div>
       </div>
-      <div class="logo">
-        <img id="tree" src="https://cdn.pixabay.com/photo/2012/04/16/13/55/silhouette-36084_1280.png">
+
+      <button class="button is-primary is-rounded">it works</button>
+
+      <!-- logged in -->
+      <div *ngIf="isLoggedIn">
+        <div class="navbar-item">
+          <a (click)="signOut()" class="links">LOGOUT</a>
+        </div>
+        <div class="navbar-item">
+          <a routerLink="auth" class="links">{{user?.email}}</a>
+        </div>
       </div>
 
+    </div>
   </div>
+
 </div>
+
 <router-outlet></router-outlet>
