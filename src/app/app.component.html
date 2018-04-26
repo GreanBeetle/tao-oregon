@@ -11,34 +11,24 @@
       <a routerLink="" class="links">HOME</a>
     </div>
     <div class="navbar-item">
-      <a routerLink="" class="links">HOME</a>
+      <a routerLink='trails' class="links">TRAILS</a>
     </div>
   </div>
 
   <!-- right side -->
   <div class="navbar-menu">
     <div class="navbar-end">
-
-      <!-- not logged in -->
-      <div *ngIf="!isLoggedIn">
-        <div class="navbar-item">
-          <a routerLink="auth" class="links">LOGIN</a>
-        </div>
+      <div class="navbar-item" *ngIf="!isLoggedIn">
+        <a routerLink="auth" class="links">LOGIN</a>
       </div>
-
-      <button class="button is-primary is-rounded">it works</button>
-
-      <!-- logged in -->
-      <div *ngIf="isLoggedIn">
-        <div class="navbar-item">
-          <a (click)="signOut()" class="links">LOGOUT</a>
-        </div>
-        <div class="navbar-item">
-          <a routerLink="auth" class="links">{{user?.email}}</a>
-        </div>
+      <div class="navbar-item" *ngIf="isLoggedIn">
+        <span (click)="signOut()" class="links">LOGOUT</span>
+        <span routerLink="auth" class="links">{{user?.email}}</span>
       </div>
-
     </div>
+
+
+
   </div>
 
 </div>
