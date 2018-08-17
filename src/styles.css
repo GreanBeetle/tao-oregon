@@ -1,4 +1,9 @@
 @font-face {
+  font-family: mountain;
+  src: url("/assets/fonts/beyond_the_mountains.ttf") format('truetype');
+}
+
+@font-face {
   font-family: "Steelfish";
   src: url("./steelfish.ttf");
 }
